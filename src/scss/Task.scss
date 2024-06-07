@@ -1,0 +1,68 @@
+.task {
+    $this: &;
+
+    display: flex;
+    background-color: var(--light-gray);
+    border-radius: var(--br);
+    cursor: grab;
+    overflow: hidden;
+
+    &__info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-width: 64px;
+        gap: 24px;
+        padding: 14px 0;
+        background-color: var(--gray);
+    }
+
+    &__img {
+        width: 32px;
+        height: 32px;
+
+        &:last-of-type {
+            margin-top: -12px;
+        }
+    }
+
+    &__priority-icon {
+        display: block;
+        width: 34px;
+        height: 14px;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 12px 14px 16px;
+    }
+
+    &__text {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    &__id {
+        color: var(--text-primary);
+
+    }
+
+    &__title {
+        font-weight: 400;
+        color: var(--text-secondary);
+    }
+
+    &.is-done {
+        #{$this}__text {
+            position: relative;
+            opacity: 0.5;
+            text-decoration: line-through;
+            text-decoration-color: rgba(61, 64, 68, 1);
+            text-decoration-thickness: 2px
+        }
+    }
+}
+

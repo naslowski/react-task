@@ -1,0 +1,76 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 22px;
+    width: 290px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;  
+        gap: 8px;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    &__control {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__btn {
+        border: none;
+        background-color: transparent;
+    }
+
+    &__btn-icon,
+    &__btn-add-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14px;
+        height: 15px;
+        cursor: pointer;
+    }
+
+    &__content {
+        display: grid;
+        width: 100%;
+        gap: 16px;
+    }
+
+    &__btn-add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        background-color: var(--btn-add);
+        border: none;
+        cursor: pointer;
+        border-radius: var(--br);
+        margin-top: 16px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            background-color: var(--btn-add-hover);
+        }
+    }
+}
